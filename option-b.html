@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop VIP Fan Pass Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-kpop">
+
+    <h1 id="page-title">K-Pop VIP Fan Pass</h1>
+    <p class="info-text">Please complete all required fields.</p>
+    <p class="info-text">Double check your email before submitting.</p>
+
+    <!-- Main Layout Container -->
+    <div class="main-layout">
+
+        <!-- Form Card -->
+        <form action="#" method="POST" class="card form-card">
+            <h2>Fan Club Sign-Up</h2>
+
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g., Jane Doe" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="userEmail">Email Address:</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="e.g., jane@example.com" required>
+            </div>
+
+            <!-- Date Input -->
+            <div class="form-group">
+                <label for="birthDate">Concert Date:</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="userNotes">Fan Banner Message:</label>
+                <textarea id="userNotes" name="userNotes" rows="3" placeholder="Enter custom banner text..." required></textarea>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Pass Level:</label>
+                <div class="option-group">
+                    <input type="radio" id="tierPass" name="ticket" value="standard" required>
+                    <label for="tierPass">General Pass</label>
+
+                    <input type="radio" id="tierVIP" name="ticket" value="vip">
+                    <label for="tierVIP">Soundcheck VIP</label>
+                </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-group">
+                <label>Concert Add-ons:</label>
+                <div class="option-group">
+                    <input type="checkbox" id="veg" name="addon" value="lightstick">
+                    <label for="veg">Lightstick Included</label>
+                </div>
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="form-group">
+                <label for="tshirt">Bias Selection:</label>
+                <select id="tshirt" name="tshirt" required>
+                    <option value="" disabled selected>Select your bias...</option>
+                    <option value="vocal">Vocal Lead</option>
+                    <option value="dancer">Main Dancer</option>
+                    <option value="rapper">Rapper</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Claim VIP Fan Pass</button>
+        </form>
+
+        <!-- Profile Card -->
+        <div class="card profile-card">
+            <div class="profile-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_qijYdjB4tWZhDMtROAkEjlEDZUy4MkaytsOf8J09zw&s=10" alt="BTS" class="avatar">
+                <h3>VIP Fan Profile</h3>
+                <p>Status: Soundcheck Confirmed</p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" class="table-title">World Tour Schedule</th>
+                    </tr>
+                    <tr>
+                        <th>City & Date</th>
+                        <th>Stage Event</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oct 12 - Seoul</td>
+                        <td>VIP Soundcheck</td>
+                        <td>Main Arena</td>
+                    </tr>
+                    <tr>
+                        <td>Oct 18 - Tokyo</td>
+                        <td>World Tour Concert</td>
+                        <td>Dome Hall</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 02 - LA</td>
+                        <td>Fan Meet & Greet</td>
+                        <td>Hall B</td>
+                    </tr>
+                    <tr>
+                        <td>Nov 10 - NYC</td>
+                        <td>Encore Concert</td>
+                        <td>Center Stage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

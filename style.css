@@ -1,0 +1,314 @@
+/* ==========================================================================
+   1. BASE STRUCTURE & LAYOUT (Universal for all themes)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    transition: background-color 0.3s ease;
+}
+
+#page-title {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.info-text {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.main-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.card {
+    width: 380px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    padding: 10px;
+    outline: none;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.2s ease;
+}
+
+.option-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.option-group label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.submit-btn {
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+
+/* ==========================================================================
+   2. THEME A: VIP TECH CONFERENCE (Sleek, Modern Cyber Blue)
+   ========================================================================== */
+
+body.theme-tech {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Dark slate background */
+    color: #f8fafc;
+}
+
+.theme-tech #page-title { color: #38bdf8; }
+.theme-tech .info-text { color: #94a3b8; }
+
+.theme-tech .card {
+    background-color: #1e293b;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.theme-tech .card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.2);
+}
+
+.theme-tech label { color: #e2e8f0; }
+
+.theme-tech input,
+.theme-tech select,
+.theme-tech textarea {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: 2px solid #334155;
+    border-radius: 6px;
+}
+
+.theme-tech input:focus,
+.theme-tech select:focus,
+.theme-tech textarea:focus {
+    border-color: #38bdf8;
+}
+
+.theme-tech .submit-btn {
+    background-color: #0284c7;
+    color: white;
+    border-radius: 6px;
+}
+
+.theme-tech .submit-btn:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+.theme-tech .avatar { border: 3px solid #38bdf8; }
+
+.theme-tech th, .theme-tech td { border-bottom: 1px solid #334155; }
+.theme-tech .table-title { background-color: #0284c7; color: white; text-align: center; }
+.theme-tech tbody tr:nth-child(even) { background-color: #1a2332; }
+
+
+/* ==========================================================================
+   3. THEME B: K-POP WORLD TOUR (Vibrant Neon Pink & Purple Gradient)
+   ========================================================================== */
+
+body.theme-kpop {
+    font-family: 'Trebuchet MS', 'Lucida Sans', sans-serif;
+    background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
+    color: #4c1d95;
+    min-height: 100vh;
+}
+
+.theme-kpop #page-title {
+    color: #c026d3;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-kpop .info-text { color: #a21caf; }
+
+.theme-kpop .card {
+    background-color: #ffffff;
+    border-radius: 20px; /* Playful rounded corners */
+    border: 2px solid #f0abfc;
+    box-shadow: 0 10px 25px rgba(217, 70, 239, 0.15);
+}
+
+.theme-kpop .card:hover {
+    transform: translateY(-8px) rotate(-0.5deg);
+    box-shadow: 0 15px 35px rgba(217, 70, 239, 0.3);
+}
+
+.theme-kpop label { color: #701a75; }
+
+.theme-kpop input,
+.theme-kpop select,
+.theme-kpop textarea {
+    background-color: #fdf4ff;
+    color: #701a75;
+    border: 2px solid #f5d0fe;
+    border-radius: 12px;
+}
+
+.theme-kpop input:focus,
+.theme-kpop select:focus,
+.theme-kpop textarea:focus {
+    border-color: #d946ef;
+    background-color: #ffffff;
+}
+
+.theme-kpop .submit-btn {
+    background: linear-gradient(90deg, #d946ef, #8b5cf6);
+    color: white;
+    border-radius: 25px; /* Pill shape button */
+    box-shadow: 0 4px 12px rgba(217, 70, 239, 0.3);
+}
+
+.theme-kpop .submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(217, 70, 239, 0.4);
+}
+
+.theme-kpop .avatar {
+    border: 4px solid #d946ef;
+    box-shadow: 0 4px 10px rgba(217, 70, 239, 0.3);
+}
+
+.theme-kpop th, .theme-kpop td { border-bottom: 1px solid #f5d0fe; }
+.theme-kpop .table-title {
+    background: linear-gradient(90deg, #d946ef, #8b5cf6);
+    color: white;
+    text-align: center;
+}
+.theme-kpop tbody tr:nth-child(even) { background-color: #fdf4ff; }
+
+
+/* ==========================================================================
+   4. THEME C: SUMMER CAMP (Warm Earthy Sage Green & Timber)
+   ========================================================================== */
+
+body.theme-camp {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #f0fdf4; /* Natural light sage background */
+    color: #14532d;
+}
+
+.theme-camp #page-title {
+    color: #166534;
+    font-size: 2.1rem;
+}
+
+.theme-camp .info-text { color: #15803d; font-style: italic; }
+
+.theme-camp .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #bbf7d0;
+    box-shadow: 0 4px 10px rgba(22, 101, 52, 0.08);
+}
+
+.theme-camp .card:hover {
+    transform: translateY(-8px);
+    border-color: #86efac;
+    box-shadow: 0 12px 24px rgba(22, 101, 52, 0.18);
+}
+
+.theme-camp label { color: #14532d; }
+
+.theme-camp input,
+.theme-camp select,
+.theme-camp textarea {
+    background-color: #f0fdf4;
+    color: #14532d;
+    border: 2px solid #bbf7d0;
+    border-radius: 4px;
+}
+
+.theme-camp input:focus,
+.theme-camp select:focus,
+.theme-camp textarea:focus {
+    border-color: #166534;
+    background-color: #ffffff;
+}
+
+.theme-camp .submit-btn {
+    background-color: #166534;
+    color: #ffffff;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.theme-camp .submit-btn:hover {
+    background-color: #14532d;
+}
+
+.theme-camp .avatar {
+    border: 3px solid #14532d; /* Warm wood accent border */
+    border-radius: 100%; /* Square badge look */
+}
+
+.theme-camp th, .theme-camp td { border-bottom: 1px solid #bbf7d0; }
+.theme-camp .table-title {
+    background-color: #166534;
+    color: white;
+    text-align: center;
+}
+.theme-camp tbody tr:nth-child(even) { background-color: #dc26260a; }
