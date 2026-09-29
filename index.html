@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Project Master Portal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #1e293b;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #334155;
+        }
+
+        .portal-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #38bdf8;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        .tab-btn {
+            background-color: #334155;
+            color: #f8fafc;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .tab-btn:hover {
+            background-color: #3b82f6;
+        }
+
+        .frame-container {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="portal-title">Web Dev Project Portal</div>
+        <nav>
+            <a href="option-a.html" target="demo-frame" class="tab-btn">Option A: VIP Tech</a>
+            <a href="option-b.html" target="demo-frame" class="tab-btn">Option B: K-Pop Pass</a>
+            <a href="option-c.html" target="demo-frame" class="tab-btn">Option C: Summer Camp</a>
+        </nav>
+    </header>
+
+    <div class="frame-container">
+        <iframe name="demo-frame" src="option-a.html" title="Project Preview Frame"></iframe>
+    </div>
+
+</body>
+</html>
